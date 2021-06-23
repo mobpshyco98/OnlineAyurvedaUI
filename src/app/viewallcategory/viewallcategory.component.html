@@ -1,0 +1,13 @@
+<div class="col-md-4 mx-auto alert alert-success" *ngIf="msg!=undefined">
+  {{msg}}
+</div>
+<table class="table table-primary table-stripped table-hovered col-8 m-2 mx-auto">
+  <tr>
+    <th>Category Id</th>
+    <th>Category Name</th>
+  </tr>
+  <tr *ngFor="let c of categories">
+    <td>{{c.categoryId}}</td>
+    <td>{{c.categoryName}}</td>
+  </tr>
+</table>  
