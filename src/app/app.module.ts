@@ -18,6 +18,10 @@ import { GetcustomercartComponent } from './getcustomercart/getcustomercart.comp
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
 import { EditcartComponent } from './editcart/editcart.component';
+import { MedSpecComponent } from './med-spec/med-spec.component';
+import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
+import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
+import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 
 
 
@@ -36,6 +40,10 @@ import { EditcartComponent } from './editcart/editcart.component';
     AddtocartComponent,
     DeletecartitemComponent,
     EditcartComponent,
+    MedSpecComponent,
+    ViewmedspecbyidComponent,
+    AddMedSpecsComponent,
+    EditMedSpecsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<section class="mx-auto text-center">
+  <!-- <section class="col-4 mx-auto m-1 text-center"></section> -->
+  <h2 class="text-center">View Medicine Specifications</h2>
+  <br/>
+  Medicine Id: <input type="text" placeholder="Enter Medicine Id" [(ngModel)]="medId"/>
+  <br/><br/>
+  <input type="button" class="btn btn-info text-white" (click)="searchById()" value="Search"/>
+</section>
+<br/>
+<section class="aler alert-danger col-4 mx-auto m-1 text-center" *ngIf="msg != undefined">{{msg}}</section>
+<section class="col-sm-10 mx-auto m-1" *ngIf="medSpec != null">
+  <table class="table table-primary table-striped table-hover col-md-8 mx-auto">
+    <tr>
+      <th>Specification Id</th>
+      <th>Specification Name</th>
+      <th>Specification Value</th>
+    </tr>
+    <tr *ngFor="let m of medSpec">
+      <td>{{m.specId}}</td>
+      <td>{{m.specName | titlecase}}</td>
+      <td>{{m.specValue}}</td>
+    </tr>
+  </table>
+</section>

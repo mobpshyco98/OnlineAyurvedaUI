@@ -1,0 +1,28 @@
+<section class="mx-auto">
+  <h2 class="text-center">Edit Medicine Specifications</h2><br>
+  <div class="alert alert-success text-center" *ngIf="msg != undefined">{{msg}}</div>
+  <div class="alert alert-danger text-center" *ngIf="errorMsg != undefined || errors != undefined">{{errorMsg}}
+    <div *ngFor = "let e of errors">{{e}}</div>
+  </div>
+  <form class="text-center" #form="ngForm" (ngSubmit)="editMedSpecs(); form.resetForm()">
+    <div>Medicine Id:</div>
+    <div><input type="text" placeholder="Enter Medicine Id" name="medicineId" [(ngModel)]="medSpecs.medicineId" #msmedid="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="msmedid.invalid && msmedid.touched">Medicine Id is required</div><br>
+
+
+    <div>Specification Id:</div>
+    <div><input type="text" placeholder="Enter Specification Id" name="specId" [(ngModel)]="medSpecs.specId" #msid="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="msid.invalid && msid.touched">Specification Id is required</div><br>
+
+    <div>Specification Name:</div>
+    <div><input type="text" placeholder="Enter Specification Name" name="specName" [(ngModel)]="medSpecs.specName" #msname="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="msname.invalid && msname.touched">Medicine specification is required</div><br>
+
+    <div>Specification Value:</div>
+    <div><input type="text" placeholder="Enter Specification Value" name="specValue" [(ngModel)]="medSpecs.specValue" #msvalue="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="msvalue.invalid && msvalue.touched">Specification Value is required</div><br>
+
+    <div class="mt-2 text-center"><input type="submit" value="Edit Specification" [disabled]="!form.valid" class="btn btn-danger"></div>
+  </form>
+
+</section>
