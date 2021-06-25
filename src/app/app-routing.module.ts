@@ -5,6 +5,7 @@ import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
 import { CategoryComponent } from './category/category.component';
+import { CgGuard } from './cg.guard';
 import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 import { EditcartComponent } from './editcart/editcart.component';
@@ -17,21 +18,22 @@ import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewme
 import { ViewmedicinebyidComponent } from './viewmedicinebyid/viewmedicinebyid.component';
 import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
 
-const routes: Routes = [{path:'category',component:CategoryComponent,
+const routes: Routes = [{path:'category',component:CategoryComponent,canActivate:[CgGuard],
                         children:[{path:'addcategory',component:AddcategoryComponent},
                                   {path:'viewallcategory',component:ViewallcategoryComponent}]},
                                   
-                        {path:'medicine',component:MedicineComponent,
+                        {path:'medicine',component:MedicineComponent,canActivate:[CgGuard],
                         children:[{path:'viewmedicinebycategory',component:ViewmedicinebycategoryComponent},
                                   {path:'viewmedicinebyid',component:ViewmedicinebyidComponent},
                                   {path:'addmedbycat',component:AddmedbycatComponent}]},
 
                         {path:'login',component:LoginComponent},
+
                         {path:'editcart/:cartId',component:EditcartComponent},
-                        {path:'getcustomercart',component:GetcustomercartComponent,
+                        {path:'getcustomercart',component:GetcustomercartComponent,canActivate:[CgGuard],
                         children:[{path:'deletecartitem/:cartId',component:DeletecartitemComponent}]},
                         
-                        {path:'medspecs',  component:MedSpecComponent,
+                        {path:'medspecs',  component:MedSpecComponent,canActivate:[CgGuard],
                         children: [{path:'viewmedspecsbyid', component:ViewmedspecbyidComponent},
                                    {path:'addmedspecs', component: AddMedSpecsComponent},
                                    {path:'editmedspecs', component: EditMedSpecsComponent}]}                        

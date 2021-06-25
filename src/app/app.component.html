@@ -1,9 +1,12 @@
-
 <header class="p-1 bg-info">
   <h1 class="text-center text-primary mx-auto"> Online Ayurveda</h1>
   <div class="col-10 text-end" *ngIf="!storageservice.loginflag">
     <a routerLink="/login" style="cursor:pointer">Login</a>
   </div>
+  <div class="col-10 text-end" *ngIf="storageservice.loginflag">
+    <span class="text-primary">{{storageservice.username|titlecase}}</span>
+    <a (click)="doLogout()" class="btn-link" style="cursor:pointer">Logout</a>
+  </div>   
 </header>
 
 <article>
