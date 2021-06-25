@@ -1,0 +1,25 @@
+<article>
+  <section class="col-4 mx-auto m-2">
+    Category <select [(ngModel)]="categoryName" (change)="viewbycategory()">
+     <option *ngFor="let c of categories" value="{{c.categoryName}}">{{c.categoryName}}</option> 
+    </select>
+  </section>
+  <div class="col-md-4 mx-auto alert alert-success" *ngIf="msg!=undefined">
+    {{msg}}
+  </div>
+  <div style="display:flex; flex-wrap:wrap; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" >
+    <div class="card border border-success rounded m-2" style="width: 18rem;background-color:#ccff99" *ngFor = "let m of medicines">
+      <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/610%2BxYveHmL._SL1000_.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{m.medicineName| titlecase}}</h5>
+          <p class="card-text">{{m.medicineCost| currency:"INR"}}</p>
+          <p class="card-text">{{m.mfd | date:'dd/MMM/yyyy'}}(Mfd)</p>
+          <p class="card-text">{{m.expiryDate | date:'dd/MMM/yyyy'}}(Exp)</p>
+          <p class="card-text">Category: {{m.category.categoryName | titlecase}}</p>
+          <input type="button" value = "add to cart" (click) = "addToCart(m.medicineId)" class = "btn btn-success"/>
+        <a class="btn btn-warning p-2 m-1">Medicine Specs</a>
+      </div>
+    </div>
+  </div>
+</article>
+

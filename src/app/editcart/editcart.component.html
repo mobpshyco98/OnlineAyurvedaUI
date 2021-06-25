@@ -1,0 +1,36 @@
+<section>
+    <button (click)="showCartItem()" class="btn btn-warning">Confirm Edit</button>
+    <div>
+        <table *ngIf="msg!=undefined">
+            <tr>
+                <td>Medicine Name</td>
+                <td>:{{cartObj.medicine.medicineName}}</td>
+            </tr>
+            <tr>
+                <td>Manufactured by</td>
+                <td>:{{cartObj.medicine.companyName}}</td>
+            </tr>
+            <tr>
+                <td>Medicine Cost</td>
+                <td>:{{cartObj.medicine.medicineCost}}</td>
+            </tr>
+            <tr>
+                <td>Manufacture date</td>
+                <td>:{{cartObj.medicine.mfd}}</td>
+            </tr>
+            <tr>
+                <td>Expiry Date</td>
+                <td>:{{cartObj.medicine.expiryDate}}</td>
+            </tr>
+            <tr>
+                <td>Quantity Ordered</td>
+                <td>:{{cartObj.qty}}</td>
+            </tr>
+            <tr>
+                <td>Enter quantity to edit</td>
+                <td><input type="number" name="editqty" [(ngModel)]="qty"></td>
+                <td><input type="submit" (click) = "editCartItem()"></td>
+            </tr>
+        </table>
+    </div>
+</section>

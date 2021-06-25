@@ -1,0 +1,40 @@
+<section class="bg-white mx-5">
+  <h2>Cart Items</h2>
+  <section>
+    <div class= "alert alert-success col-5 mx-auto" *ngIf = "msg!=undefined">{{msg}}</div>
+    <div style="display: flex;">
+
+      <div
+        style="display:flex; flex-wrap:wrap; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+        *ngIf="msg == undefined" name="cards">
+
+        <div class="card border border-success rounded m-2" style="width: 18rem;background-color:#ccff99"
+          *ngFor="let c of cartObj">
+          <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/610%2BxYveHmL._SL1000_.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Medicine :{{c.medicine.medicineName}}</h5>
+            <p class="card-text">Quantity :{{c.qty}}</p>
+            <a (click)="deleteItem(c.cartId)" class="btn btn-danger" style="text-align:center;display:block;">Delete</a>
+            <a routerLink="/editcart/{{c.cartId}}" class="btn btn-warning"
+              style="text-align:center;display:block;">Edit</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+          <div>
+            <h4>Cart Amount</h4>
+            <h4>{{sum | currency : 'INR'}}</h4>
+          </div>
+
+          <div class="" name="EditrouterOutlet">
+            <router-outlet></router-outlet>
+          </div>
+
+      </div>
+
+    </div>
+
+  </section>
+</section>
