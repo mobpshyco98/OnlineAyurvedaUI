@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
 import { CategoryComponent } from './category/category.component';
+import { LoginComponent } from './login/login.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { ViewallcategoryComponent } from './viewallcategory/viewallcategory.component';
 import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewmedicinebycategory.component';
@@ -14,7 +15,8 @@ const routes: Routes = [ {path:'category',component:CategoryComponent,
                          {path:'medicine',component:MedicineComponent,
                           children:[{path:'viewmedicinebycategory',component:ViewmedicinebycategoryComponent},
                                     {path:'viewmedicinebyid',component:ViewmedicinebyidComponent},
-                                    {path:'addmedbycat',component:AddmedbycatComponent}]}];
+                                    {path:'addmedbycat',component:AddmedbycatComponent}]},
+                         {path:'login',component:LoginComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

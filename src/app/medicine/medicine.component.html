@@ -1,12 +1,12 @@
-<article class="row col-10 mx-auto" [ngStyle]="{height:'400px'}">
-  <section class="col-3 bg-info p-2 m-2 mx-auto">
+<article class=""  style="display:flex">
+  <section class="col-2 p-1 m-2 ">
     
-    <div><input type="button" class="btn btn-warning m-3 w-50" value="medicinebyid" routerLink="/medicine/viewmedicinebyid/"/></div>
-    <div><input type="button" class="btn btn-warning m-3 w-50" value="viewmedbycat" routerLink="/medicine/viewmedicinebycategory/"/></div>
-    <div><input type="button" class="btn btn-warning m-3 w-50" value="addmedbycat" routerLink="/medicine/addmedbycat/"/></div>
+    <div><input type="button" class="btn btn-info m-3" value="medicinebyid" routerLink="/medicine/viewmedicinebyid/"/></div>
+    <div><input type="button" class="btn btn-info m-3" value="viewmedbycat" routerLink="/medicine/viewmedicinebycategory/"/></div>
+    <div><input type="button" class="btn btn-info m-3" value="addmedbycat" routerLink="/medicine/addmedbycat/"/></div>
   </section>
-  <section class="col-6 p-2 m-2" >
-    <h2> </h2>
+  <section class="p-2 m-2" >
+    
     <router-outlet></router-outlet>
   </section>
 </article>

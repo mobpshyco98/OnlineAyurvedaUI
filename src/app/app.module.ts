@@ -13,6 +13,7 @@ import { MedicineComponent } from './medicine/medicine.component';
 import { ViewmedicinebyidComponent } from './viewmedicinebyid/viewmedicinebyid.component';
 import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewmedicinebycategory.component';
 import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
     MedicineComponent,
     ViewmedicinebyidComponent,
     ViewmedicinebycategoryComponent,
-    AddmedbycatComponent
+    AddmedbycatComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
