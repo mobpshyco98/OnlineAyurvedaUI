@@ -14,6 +14,11 @@ import { ViewmedicinebyidComponent } from './viewmedicinebyid/viewmedicinebyid.c
 import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewmedicinebycategory.component';
 import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
 import { LoginComponent } from './login/login.component';
+import { GetcustomercartComponent } from './getcustomercart/getcustomercart.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
+import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
+import { EditcartComponent } from './editcart/editcart.component';
+
 
 
 @NgModule({
@@ -26,13 +31,18 @@ import { LoginComponent } from './login/login.component';
     ViewmedicinebyidComponent,
     ViewmedicinebycategoryComponent,
     AddmedbycatComponent,
-    LoginComponent
+    LoginComponent,
+    GetcustomercartComponent,
+    AddtocartComponent,
+    DeletecartitemComponent,
+    EditcartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

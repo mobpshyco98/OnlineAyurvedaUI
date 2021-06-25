@@ -7,5 +7,7 @@ export class Medicine {
     mfd:string;
     expiryDate:string;
     stock:number;
-    cat:Category = new Category();
+    image:string;
+    companyName:string;
+    category:Category = new Category();
 }

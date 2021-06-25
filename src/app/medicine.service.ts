@@ -1,9 +1,9 @@
+
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Logindto } from './logindto';
 import { Meddto } from './meddto';
-
 @Injectable({
   providedIn: 'root'
 })

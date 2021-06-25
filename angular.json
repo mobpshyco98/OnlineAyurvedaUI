@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "OnlineAyurveda": {
+
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -102,7 +103,9 @@
         }
       }
     },
+
     "OnlineAyurveda-e2e": {
+   
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,6 +119,7 @@
           "configurations": {
             "production": {
               "devServerTarget": "OnlineAyurveda:serve:production"
+           
             }
           }
         },
@@ -131,5 +135,7 @@
       }
     }
   },
+
   "defaultProject": "OnlineAyurveda"
+  
 }

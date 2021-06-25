@@ -9,6 +9,7 @@ import { StorageService } from './storageservice.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'OnlineAyurveda';
   constructor(public storageservice: StorageService, public medicineservice: MedicineService, public router: Router) { }
   doLogout(): void {
@@ -21,4 +22,6 @@ export class AppComponent {
       }
     );
   }
+
+
 }

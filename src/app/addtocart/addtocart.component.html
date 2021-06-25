@@ -1,0 +1,37 @@
+<section class="mx-auto col-md-4 p-5">
+  <div class="p-3">
+    <h3>Add To cart</h3>
+  </div>
+  <div class="alert alert-success" *ngIf="msg!=undefined">{{msg}}</div>
+  <div *ngIf="errorList != undefined">
+    <div class="alert alert-danger" *ngFor="let er of errorList">{{er}}</div>
+  </div>
+  <div class="alert alert-danger" *ngIf = "error != undefined">{{error}}</div>
+  <form #frm="ngForm" (ngSubmit)="addToCart()">
+    <table>
+      <tr>
+        <td>Enter CustomerId</td>
+        <td><input type="number" [(ngModel)]="cartDto.custId" name="custId" #custId="ngModel"
+            class="form from-control" /></td>
+      </tr>
+
+      <tr>
+        <td>Enter Medicine Id</td>
+        <td><input type="number" [(ngModel)]="cartDto.medicineId" name="medId" #medId="ngModel"
+            class="form from-control" required /></td>
+        <div class="alert alert-danger" *ngIf="medId.touched && medId.invalid">Medicine Id cannot be null</div>
+      </tr>
+
+      <tr>
+        <td>Enter quantity</td>
+        <td><input type="number" [(ngModel)]="cartDto.qty" name="qty" #qty="ngModel" class="form from-control"
+            required /></td>
+        <div class="alert alert-danger" *ngIf="qty.touched && qty.invalid">Quantity cannot be null</div>
+      </tr>
+      <tr>
+        <td><input type="submit" [disabled]="!frm.valid" value="Add to cart" class="btn btn-danger"></td>
+      </tr>
+    </table>
+  </form>
+</section>
+

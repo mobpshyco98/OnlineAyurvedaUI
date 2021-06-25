@@ -1,3 +1,4 @@
+
 <header class="p-1 bg-info">
   <h1 class="text-center text-primary mx-auto"> Online Ayurveda</h1>
   <div class="col-10 text-end" *ngIf="!storageservice.loginflag">
@@ -6,11 +7,11 @@
 </header>
 
 <article>
-  <nav class="col-6 bg-dark p-2 m-5 mx-auto ">
+  <nav class="nav justify-content-center navbar navbar-expand-lg navbar-light bg-light">
     
-    <a routerLink='category' class="m-2 text-white">Category </a>
-    <a routerLink='medicine' class="m-2 text-white">Medicine</a>
-    
+    <a routerLink='category'class="navbar-brand btn btn-secondary text-white">Category </a>
+    <a routerLink='medicine' class="navbar-brand btn btn-secondary text-white">Medicine</a>
+    <a class="navbar-brand btn btn-secondary text-white" routerLink="getcustomercart">Cart</a>
   </nav>
   <router-outlet></router-outlet>
 </article>

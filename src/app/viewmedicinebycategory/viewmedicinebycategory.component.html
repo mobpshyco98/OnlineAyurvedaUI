@@ -1,3 +1,4 @@
+
 <article style="width:100%">
   <section class="col-3 mx-auto m-2">
     Category<select [(ngModel)]="categoryName" (change)="viewbycategory()">
@@ -18,6 +19,7 @@
           <p class="card-text">Category: {{m.category.categoryName | titlecase}}</p>
           <input type="button" value = "Add to Cart" (click) = "addToCart(m.medicineId)" class = "btn btn-info p-2 m-2"/>
           <input type="button" value = "specification" (click) = "med_specs(m.medicineId)" class = "btn btn-warning p-2"/>
+
       </div>
     </div>
   </div>

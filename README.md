@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # OnlineAyurveda
+=======
+# AngularOam
+>>>>>>> 6e929db93b6a85daf04a808c63f3d0f9fd92e3e1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.4.
 
