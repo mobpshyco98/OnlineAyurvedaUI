@@ -7,6 +7,7 @@ import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
 import { CategoryComponent } from './category/category.component';
 import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
+import { EditcartComponent } from './editcart/editcart.component';
 import { GetcustomercartComponent } from './getcustomercart/getcustomercart.component';
 import { LoginComponent } from './login/login.component';
 import { MedSpecComponent } from './med-spec/med-spec.component';
@@ -26,8 +27,9 @@ const routes: Routes = [{path:'category',component:CategoryComponent,
                                   {path:'addmedbycat',component:AddmedbycatComponent}]},
 
                         {path:'login',component:LoginComponent},
+                        {path:'editcart/:cartId',component:EditcartComponent},
                         {path:'getcustomercart',component:GetcustomercartComponent,
-                        children:[{path:'deletecartitem/:cartId',component:DeletecartitemComponent},]},
+                        children:[{path:'deletecartitem/:cartId',component:DeletecartitemComponent}]},
                         
                         {path:'medspecs',  component:MedSpecComponent,
                         children: [{path:'viewmedspecsbyid', component:ViewmedspecbyidComponent},
