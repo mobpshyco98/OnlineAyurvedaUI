@@ -16,7 +16,6 @@ import { MedicineService } from '../medicine.service';
 })
 export class ViewmedicinebycategoryComponent implements OnInit {
 
-
   med: Meddto = new Meddto();
   msg: string;
   msgflag: boolean;
@@ -36,7 +35,7 @@ export class ViewmedicinebycategoryComponent implements OnInit {
   }
   ngOnInit() {
     this.categoryservice.viewallcategory().subscribe(data => this.categories = data);
-    this.custId = 1003;
+    this.custId = JSON.parse(localStorage.getItem("userinfo")).userId;
 
   }
   viewbycategory() {
@@ -51,6 +50,7 @@ export class ViewmedicinebycategoryComponent implements OnInit {
       }
     )
   }
+
   addToCart(med:number) {
     console.log("inside add to cart ");
     this.medicineId = med;

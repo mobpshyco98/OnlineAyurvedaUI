@@ -8,6 +8,8 @@ import { Meddto } from './meddto';
   providedIn: 'root'
 })
 export class MedicineService {
+  userId:number;
+
   addmedbycat(med:Meddto):Observable<any> {
     return this.http.post('http://localhost:8082/oamapp/addMedicinebycategory',med);
   }
@@ -20,6 +22,9 @@ export class MedicineService {
 
   constructor(public http:HttpClient) { }
   doLogin(login:Logindto):Observable<any>{ 
+    console.log("inside dologin service");
+    console.log(login.customerId);
+    this.userId = login.customerId;
     return this.http.post("http://localhost:8082/oamapp/login",login);
 
   }

@@ -14,7 +14,7 @@
     
     <a routerLink='category'class="navbar-brand btn btn-secondary text-white">Category </a>
     <a routerLink='medicine' class="navbar-brand btn btn-secondary text-white">Medicine</a>
-    <a class="navbar-brand btn btn-secondary text-white" routerLink="getcustomercart">Cart</a>
+    <a class="navbar-brand btn btn-secondary text-white" routerLink="getcustomercart" (click) = "setUserId()">Cart</a>
     <a class="navbar-brand btn btn-secondary text-white" routerLink="medspecs">Medicine Specifications</a>
   </nav>
   <router-outlet></router-outlet>

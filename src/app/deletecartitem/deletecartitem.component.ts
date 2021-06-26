@@ -8,17 +8,15 @@ import { CartserviceService } from '../cartservice.service';
   templateUrl: './deletecartitem.component.html',
   styleUrls: ['./deletecartitem.component.css']
 })
-export class DeletecartitemComponent implements OnInit,OnChanges {
+export class DeletecartitemComponent implements OnInit {
 
 cartId:number;
 custId:number; 
   
   constructor(private cartService:CartserviceService,private route:ActivatedRoute,private router:Router) { 
-    this.custId = 1003;
+    this.custId = JSON.parse(localStorage.getItem("userinfo")).userId;
   }
-  ngOnChanges(changes: SimpleChanges) {
-    
-  }
+ 
 
   ngOnInit():void {
     this.route.paramMap.subscribe(params =>{

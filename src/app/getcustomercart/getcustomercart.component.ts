@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart } from '../cart';
 import { CartserviceService } from '../cartservice.service';
+import { MedicineService } from '../medicine.service';
 
 @Component({
   selector: 'app-getcustomercart',
@@ -18,13 +19,13 @@ export class GetcustomercartComponent implements OnInit {
 
   constructor(private cartService: CartserviceService) {
     this.user = this.cartService.userName;
-    this.user = 'Sourabh';
+    this.custId = JSON.parse(localStorage.getItem("userinfo")).userId;
+    console.log("inside get customer userId",this.custId);
   }
 
 
   ngOnInit() {
     console.log("inside ngOnInti");
-    this.custId = 1003;
     this.getCustomerCart();
   }
 
@@ -36,10 +37,12 @@ export class GetcustomercartComponent implements OnInit {
       this.msg = undefined
       this.sum = 0;
       this.cartAmount();
+      
     },
       error => {
         this.msg = "No cart item Found";
         // this.cartObj = undefined
+        this.sum = 0;
       });
 
 
@@ -63,5 +66,6 @@ export class GetcustomercartComponent implements OnInit {
      });
      return Math.round(this.sum);
   }
+
 }
 
