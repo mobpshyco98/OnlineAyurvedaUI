@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MedSpecServiceService } from '../med-spec-service.service';
 import { Medspec } from '../medspec';
 
@@ -12,9 +13,13 @@ export class ViewmedspecbyidComponent implements OnInit {
   medId:number;
   msg:string;
 
-  constructor(private medSpecService: MedSpecServiceService) { }
+  constructor(private medSpecService: MedSpecServiceService, private route: ActivatedRoute) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if(this.route.snapshot.queryParamMap.get('medId') != null)
+      this.medId = parseInt(this.route.snapshot.queryParamMap.get('medId'));
+      this.searchById();
+   }
 
   searchById(){
     this.medSpecService.viewMedSpecsById(this.medId).subscribe(data=>{this.medSpec=data, this.msg=undefined},

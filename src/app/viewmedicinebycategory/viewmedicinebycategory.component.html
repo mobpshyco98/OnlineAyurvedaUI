@@ -18,7 +18,7 @@
           <p class="card-text">{{m.expiryDate | date:'dd/MMM/yyyy'}}(Exp)</p>
           <p class="card-text">Category: {{m.category.categoryName | titlecase}}</p>
           <input type="button" value = "Add to Cart" (click) = "addToCart(m.medicineId)" class = "btn btn-info p-2 m-2"/>
-          <input type="button" value = "specification" (click) = "med_specs(m.medicineId)" class = "btn btn-warning p-2"/>
+          <button class = "btn btn-warning p-2"><a style="text-decoration: none; color: black;" [routerLink]="['/medspecs/viewmedspecsbyid']" [queryParams]= "{medId: m.medicineId}">Specification</a></button>
 
       </div>
     </div>
