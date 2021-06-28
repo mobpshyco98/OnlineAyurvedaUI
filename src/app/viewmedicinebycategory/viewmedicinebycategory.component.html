@@ -5,11 +5,11 @@
      <option *ngFor="let c of categories" value="{{c.categoryName}}">{{c.categoryName}}</option> 
     </select>
   </section>
-  <div class="col-md-4 mx-auto alert alert-success" *ngIf="msg!=undefined">
+  <div class="col-md-4 mx-auto alert alert-success" *ngIf="msg!=undefined"> 
     {{msg}}
   </div>
   <div style="display:flex; flex-wrap:wrap; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" >
-    <div class="card border border-success rounded m-2" style="width: 18rem;background-color:#ccff99" *ngFor = "let m of medicines">
+    <div class="card border border-success rounded m-2 diplayCard" style="width: 18rem;background-color:#ccff99" *ngFor = "let m of medicines">
       <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/610%2BxYveHmL._SL1000_.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{m.medicineName| titlecase}}</h5>

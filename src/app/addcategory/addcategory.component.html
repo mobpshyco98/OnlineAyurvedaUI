@@ -1,8 +1,8 @@
-<section class="col-4 bg-primary mx-auto card card-primary p-1 m-1" id="addid">
+<section class="bg-light-info" id="addid">
   <div class="alert alert-sucess" *ngIf="msg!=undefined" [ngStyle]="{'background-color':this.msgflag?'green':'red'}">{{msg}}</div>
-  <form #frm="ngForm" (ngSubmit)="add()">
+  <form #frm="ngForm" class="" (ngSubmit)="add()">
     <div>Category Name</div>
-    <div><input type="text" class="form-control" name="txtdept" [(ngModel)]="cat.categoryName" #cname="ngModel" required/></div>
+    <div><input type="text"  name="txtdept" [(ngModel)]="cat.categoryName" #cname="ngModel" required/></div>
     <div *ngIf="cname.invalid && cname.touched" class="alert alert-danger">
       <div *ngIf="cname.errors.required">Category is required</div>
       
