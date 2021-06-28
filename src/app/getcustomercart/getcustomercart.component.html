@@ -2,8 +2,9 @@
   <h2>Cart Items</h2>
   <section>
     <div class= "alert alert-success col-5 mx-auto" *ngIf = "msg!=undefined">{{msg}}</div>
+  
     <div style="display: flex;">
-
+      <div style = "width: 75%;">
       <div
         style="display:flex; flex-wrap:wrap; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
         *ngIf="msg == undefined" name="cards">
@@ -21,7 +22,9 @@
           </div>
         </div>
       </div>
-
+  
+    </div>
+  
       <div>
           <div>
             <h4>Cart Amount</h4>

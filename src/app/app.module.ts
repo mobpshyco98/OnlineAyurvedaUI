@@ -22,6 +22,7 @@ import { MedSpecComponent } from './med-spec/med-spec.component';
 import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
 import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
+import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
 
 
 
@@ -44,6 +45,7 @@ import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component
     ViewmedspecbyidComponent,
     AddMedSpecsComponent,
     EditMedSpecsComponent,
+    ViewcustomerComponent,
   ],
   imports: [
     BrowserModule,

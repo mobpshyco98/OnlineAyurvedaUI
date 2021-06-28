@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { MedSpecComponent } from './med-spec/med-spec.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { ViewallcategoryComponent } from './viewallcategory/viewallcategory.component';
+import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
 import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewmedicinebycategory.component';
 import { ViewmedicinebyidComponent } from './viewmedicinebyid/viewmedicinebyid.component';
 import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
@@ -28,6 +29,7 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
                                   {path:'addmedbycat',component:AddmedbycatComponent}]},
 
                         {path:'login',component:LoginComponent},
+                        {path:'profile',component:ViewcustomerComponent},
 
                         {path:'editcart/:cartId',component:EditcartComponent},
                         {path:'getcustomercart',component:GetcustomercartComponent,canActivate:[CgGuard],
