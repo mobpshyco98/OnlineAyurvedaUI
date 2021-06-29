@@ -1,7 +1,7 @@
 <section class="bg-white mx-5">
   <h2>Cart Items</h2>
   <section>
-    <div class= "alert alert-success col-5 mx-auto" *ngIf = "msg!=undefined">{{msg}}</div>
+    <div class="alert alert-success col-5 mx-auto" *ngIf="msg!=undefined">{{msg}}</div>
     <div style="display: flex;">
 
       <div
@@ -22,15 +22,21 @@
         </div>
       </div>
 
-      <div>
+      <div style="position: absolute;
+      right: 150px;
+      width: 200px;
+      height: 120px;">
+        <div>
+          <h4>Cart Amount</h4>
+          <h4>{{sum | currency : 'INR'}}</h4>
           <div>
-            <h4>Cart Amount</h4>
-            <h4>{{sum | currency : 'INR'}}</h4>
+            <input type="button" value="Order Now" (click)="addOrder()" class="btn btn-info p-2 m-2" />
           </div>
+        </div>
 
-          <div class="" name="EditrouterOutlet">
-            <router-outlet></router-outlet>
-          </div>
+        <div class="" name="EditrouterOutlet">
+          <router-outlet></router-outlet>
+        </div>
 
       </div>
 

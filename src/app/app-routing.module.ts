@@ -7,6 +7,7 @@ import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
 import { CategoryComponent } from './category/category.component';
 import { CgGuard } from './cg.guard';
 import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
+import { DeleteorderComponent } from './deleteorder/deleteorder.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 import { EditcartComponent } from './editcart/editcart.component';
 import { GetcustomercartComponent } from './getcustomercart/getcustomercart.component';
@@ -14,9 +15,13 @@ import { LoginComponent } from './login/login.component';
 import { MedSpecComponent } from './med-spec/med-spec.component';
 import { MedicineComponent } from './medicine/medicine.component';
 import { ViewallcategoryComponent } from './viewallcategory/viewallcategory.component';
+import { ViewallordersComponent } from './viewallorders/viewallorders.component';
+import { ViewbycustidComponent } from './viewbycustid/viewbycustid.component';
+import { ViewbyorderidComponent } from './viewbyorderid/viewbyorderid.component';
 import { ViewmedicinebycategoryComponent } from './viewmedicinebycategory/viewmedicinebycategory.component';
 import { ViewmedicinebyidComponent } from './viewmedicinebyid/viewmedicinebyid.component';
 import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
+import { VieworderComponent } from './vieworder/vieworder.component';
 
 const routes: Routes = [{path:'category',component:CategoryComponent,canActivate:[CgGuard],
                         children:[{path:'addcategory',component:AddcategoryComponent},
@@ -36,8 +41,14 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
                         {path:'medspecs',  component:MedSpecComponent,canActivate:[CgGuard],
                         children: [{path:'viewmedspecsbyid', component:ViewmedspecbyidComponent},
                                    {path:'addmedspecs', component: AddMedSpecsComponent},
-                                   {path:'editmedspecs', component: EditMedSpecsComponent}]}                        
-                        ];
+                                   {path:'editmedspecs', component: EditMedSpecsComponent}]},
+                                   
+                        { path: 'vieworder', component: VieworderComponent,
+                          children: [{ path: 'bycustid', component: ViewbycustidComponent },
+                                     { path: 'byorderid', component: ViewbyorderidComponent },
+                                     { path: 'allorders', component: ViewallordersComponent,canActivate:[CgGuard] }]},
+                        { path: 'deleteorder', component: DeleteorderComponent }];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{onSameUrlNavigation:'reload'})],

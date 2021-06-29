@@ -22,6 +22,11 @@ import { MedSpecComponent } from './med-spec/med-spec.component';
 import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.component';
 import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
+import { VieworderComponent } from './vieworder/vieworder.component';
+import { ViewallordersComponent } from './viewallorders/viewallorders.component';
+import { ViewbyorderidComponent } from './viewbyorderid/viewbyorderid.component';
+import { ViewbycustidComponent } from './viewbycustid/viewbycustid.component';
+import { DeleteorderComponent } from './deleteorder/deleteorder.component';
 
 
 
@@ -44,6 +49,11 @@ import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component
     ViewmedspecbyidComponent,
     AddMedSpecsComponent,
     EditMedSpecsComponent,
+    VieworderComponent,
+    ViewallordersComponent,
+    ViewbyorderidComponent,
+    ViewbycustidComponent,
+    DeleteorderComponent
   ],
   imports: [
     BrowserModule,
