@@ -1,0 +1,13 @@
+<section class="mx-auto text-center">
+  <h2 class="text-center">Cancel Order</h2>
+  <br/>
+  Order Id: <input type="text" placeholder="Enter Order Id" [(ngModel)]="orderId"/>
+  <br/><br/>
+  <input type="button" class="btn btn-info text-white mb-3" (click)="cancelOrder()" value="Cancel Order"/><br/>
+  <div *ngIf="flag != undefined" class="alert alert-success col-4 mx-auto">
+    {{flag}}
+  </div>
+  <div *ngIf="error != undefined" class="alert alert-danger col-4 mx-auto m-1 text-center">
+    {{error}}
+  </div>
+</section>

@@ -19,10 +19,7 @@ export class EditMedSpecsComponent implements OnInit {
 
   constructor(private medSpecService: MedSpecServiceService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() {
-  //   this.route.paramMap.subscribe(params=>{let specId:number = parseInt(params.get("id"));
-  //   this.medSpecService.viewMedSpecsById(specId).subscribe(data=>this.medSpecs = data);  
-  // });  
+  ngOnInit() { 
   }
   
   editMedSpecs(){

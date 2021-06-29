@@ -23,6 +23,7 @@ import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.comp
 import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
+import { CancelOrderComponent } from './cancel-order/cancel-order.component';
 
 
 
@@ -46,6 +47,7 @@ import { ViewcustomerComponent } from './viewcustomer/viewcustomer.component';
     AddMedSpecsComponent,
     EditMedSpecsComponent,
     ViewcustomerComponent,
+    CancelOrderComponent,
   ],
   imports: [
     BrowserModule,

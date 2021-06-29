@@ -4,6 +4,7 @@ import { AddMedSpecsComponent } from './add-med-specs/add-med-specs.component';
 
 import { AddcategoryComponent } from './addcategory/addcategory.component';
 import { AddmedbycatComponent } from './addmedbycat/addmedbycat.component';
+import { CancelOrderComponent } from './cancel-order/cancel-order.component';
 import { CategoryComponent } from './category/category.component';
 import { CgGuard } from './cg.guard';
 import { DeletecartitemComponent } from './deletecartitem/deletecartitem.component';
@@ -38,7 +39,10 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
                         {path:'medspecs',  component:MedSpecComponent,canActivate:[CgGuard],
                         children: [{path:'viewmedspecsbyid', component:ViewmedspecbyidComponent},
                                    {path:'addmedspecs', component: AddMedSpecsComponent},
-                                   {path:'editmedspecs', component: EditMedSpecsComponent}]}                        
+                                   {path:'editmedspecs', component: EditMedSpecsComponent}]},
+                                   
+                        {path: 'removeorder', component: CancelOrderComponent, canActivate:[CgGuard]}
+                                   
                         ];
 
 @NgModule({
