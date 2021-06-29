@@ -1,0 +1,7 @@
+<div class="col-5 mx-auto p-2 m-2">
+  <input type="text" placeholder="Enter Order Id" [(ngModel)]="oid" class="form-control" />
+  <input type="button" value="Delete" (click)="deleteOrder()" class="btn btn-info"/>
+</div>
+<section>
+  <div *ngIf="msg!=undefined" class="alert alert-info">{{msg.message}}</div>
+</section>
