@@ -16,7 +16,7 @@ export class AppComponent {
     this.medicineservice.doLogout().subscribe(
       data => {
         localStorage.removeItem("userinfo");
-        this.storageservice.msg = "you have logged out";
+        this.storageservice.msg = "You have logged out";
         this.storageservice.loginflag = false;
         this.router.navigateByUrl("/login");
       }
