@@ -17,7 +17,7 @@
     <div><input type="text" placeholder="Enter Specification Value" name="specValue" [(ngModel)]="medSpecs.specValue" #msvalue="ngModel" required></div>
     <div class="alert alert-danger" *ngIf="msvalue.invalid && msvalue.touched">Specification Value is required</div><br>
 
-    <div class="mt-2 text-center"><input type="submit" value="Add Specification" [disabled]="!form.valid" class="btn btn-danger"></div>
+    <div class="mt-2 text-center"><input type="submit" value="Add Specification" [disabled]="!form.valid" class="btn btn-info text-white"></div>
   </form>
 
 </section>

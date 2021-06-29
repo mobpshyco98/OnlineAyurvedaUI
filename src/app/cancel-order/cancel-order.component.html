@@ -3,7 +3,7 @@
   <br/>
   Order Id: <input type="text" placeholder="Enter Order Id" [(ngModel)]="orderId"/>
   <br/><br/>
-  <input type="button" class="btn btn-info text-white mb-3" (click)="cancelOrder()" value="Cancel Order"/><br/>
+  <input type="button" class="btn btn-danger text-white mb-3" (click)="cancelOrder()" value="Cancel Order"/><br/>
   <div *ngIf="flag != undefined" class="alert alert-success col-4 mx-auto">
     {{flag}}
   </div>

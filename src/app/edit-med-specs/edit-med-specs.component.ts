@@ -12,7 +12,6 @@ import { Medspecdto } from '../medspecdto';
 export class EditMedSpecsComponent implements OnInit {
   
   medSpecs: Medspecdto = new Medspecdto();
-  //medSpecs: Medspecdto;
   msg: string;
   errorMsg: string;
   meds: Medicine[] = [];

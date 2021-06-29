@@ -12,11 +12,8 @@ export class ViewmedspecbyidComponent implements OnInit {
   medSpec:Medspec=null;
   medId:number;
   msg:string;
-  msg2: string;
 
-  constructor(private medSpecService: MedSpecServiceService, private route: ActivatedRoute) { 
-    this.msg2 = undefined;
-  }
+  constructor(private medSpecService: MedSpecServiceService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     if(this.route.snapshot.queryParamMap.get('medId') != null)
@@ -25,8 +22,8 @@ export class ViewmedspecbyidComponent implements OnInit {
    }
 
   searchById(){
-    this.medSpecService.viewMedSpecsById(this.medId).subscribe(data=>{this.medSpec=data, this.msg=undefined},
-      error=>{console.log(error); this.msg=error.error.message; this.medSpec=null; this.msg2="error"});
+    this.medSpecService.viewMedSpecsById(this.medId).subscribe(data=>{console.log(data); this.medSpec=data},
+      error=>{console.log(error); this.msg=undefined, this.msg=error.error.message; this.medSpec=null});
   }
 
 }
