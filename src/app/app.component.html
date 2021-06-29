@@ -1,21 +1,21 @@
-<header class="p-1 bg-info">
-  <h1 class="text-center text-primary mx-auto"> Online Ayurveda</h1>
+<header class="p-1" style="background-color: #ccff99;">
+  <h1 class="text-center text-primary mx-auto">Ayurveda Medicine Store</h1>
   <div class="col-10 text-end" *ngIf="!storageservice.loginflag">
     <a routerLink="/login" style="cursor:pointer">Login</a>
   </div>
   <div class="col-10 text-end" *ngIf="storageservice.loginflag">
-    <span class="text-primary">{{storageservice.username|titlecase}}</span>
-    <a (click)="doLogout()" class="btn-link" style="cursor:pointer">Logout</a>
+    <span>{{storageservice.username|titlecase}}</span>
+    <span><a class="btn-link" class="m-2" style="cursor:pointer" routerLink="profile">Profile</a></span>
+    <span><a (click)="doLogout()" class="m-0" style="cursor:pointer">Logout</a></span>
   </div>   
 </header>
 
 <article>
-  <nav class="nav justify-content-center navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="nav justify-content-center navbar navbar-expand-lg navbar-dark bg-dark" style="text-transform: uppercase;">
     <a routerLink='category'class="navbar-brand text-white">Category</a>
     <a routerLink='medicine' class="navbar-brand text-white">Medicine</a>
     <a class="navbar-brand text-white" routerLink="getcustomercart" (click) = "setUserId()">Cart</a>
     <a class="navbar-brand text-white" routerLink="medspecs">Medicine Specifications</a>
-    <a class="navbar-brand text-white" routerLink="profile">Profile</a>
     <a class="navbar-brand text-white" routerLink="removeorder">Cancel Order</a>
   </nav>
   <router-outlet></router-outlet>
