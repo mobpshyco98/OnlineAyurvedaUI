@@ -12,17 +12,13 @@ import { Medspecdto } from '../medspecdto';
 export class EditMedSpecsComponent implements OnInit {
   
   medSpecs: Medspecdto = new Medspecdto();
-  //medSpecs: Medspecdto;
   msg: string;
   errorMsg: string;
   meds: Medicine[] = [];
 
   constructor(private medSpecService: MedSpecServiceService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit() {
-  //   this.route.paramMap.subscribe(params=>{let specId:number = parseInt(params.get("id"));
-  //   this.medSpecService.viewMedSpecsById(specId).subscribe(data=>this.medSpecs = data);  
-  // });  
+  ngOnInit() { 
   }
   
   editMedSpecs(){

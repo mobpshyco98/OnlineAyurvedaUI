@@ -22,8 +22,8 @@ export class ViewmedspecbyidComponent implements OnInit {
    }
 
   searchById(){
-    this.medSpecService.viewMedSpecsById(this.medId).subscribe(data=>{this.medSpec=data, this.msg=undefined},
-      error=>{console.log(error); this.msg=error.error.message; this.medSpec=null});
+    this.medSpecService.viewMedSpecsById(this.medId).subscribe(data=>{console.log(data); this.medSpec=data},
+      error=>{console.log(error); this.msg=undefined, this.msg=error.error.message; this.medSpec=null});
   }
 
 }
