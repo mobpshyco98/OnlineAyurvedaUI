@@ -13,6 +13,7 @@
       <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/610%2BxYveHmL._SL1000_.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{m.medicineName| titlecase}}</h5>
+          <p class="card-text">Medicine Id: {{m.medicineId}}</p>
           <p class="card-text">{{m.medicineCost| currency:"INR"}}</p>
           <p class="card-text">{{m.mfd | date:'dd/MMM/yyyy'}}(Mfd)</p>
           <p class="card-text">{{m.expiryDate | date:'dd/MMM/yyyy'}}(Exp)</p>
