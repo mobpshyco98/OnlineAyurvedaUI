@@ -49,6 +49,7 @@ export class GetcustomercartComponent implements OnInit {
       this.msg = undefined
       this.sum = 0;
       this.cartAmount();
+      this.orderDto.totalCost = this.sum;
 
     },
       error => {
@@ -56,8 +57,6 @@ export class GetcustomercartComponent implements OnInit {
         // this.cartObj = undefined
         this.sum = 0;
       });
-
-
   }
 
   deleteItem(cartId: number) {
@@ -84,8 +83,8 @@ export class GetcustomercartComponent implements OnInit {
 
     this.orderDto.customerId = this.custId;
     this.orderDto.orderDate = this.date;
-    this.orderDto.orderStatus = "order confirmed";
-    this.orderDto.totalCost = this.sum;
+    this.orderDto.orderStatus = "confirmed";
+    //this.orderDto.totalCost = this.sum;
 
     console.log(this.orderDto);
 

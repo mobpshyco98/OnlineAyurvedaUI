@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from '../order.service';
+import { Orderdto } from '../orderdto';
 
 @Component({
   selector: 'app-viewbycustid',
