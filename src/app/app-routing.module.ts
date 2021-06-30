@@ -11,6 +11,7 @@ import { DeletecartitemComponent } from './deletecartitem/deletecartitem.compone
 import { DeleteorderComponent } from './deleteorder/deleteorder.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 import { EditcartComponent } from './editcart/editcart.component';
+import { EditcustomerComponent } from './editcustomer/editcustomer.component';
 import { GetcustomercartComponent } from './getcustomercart/getcustomercart.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -57,7 +58,9 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
 
                         {path: 'removeorder', component: CancelOrderComponent, canActivate:[CgGuard]},
 
-                        {path: '', component: HomeComponent}
+                        {path: '', component: HomeComponent},
+                        
+                        {path:"editprofile",component:EditcustomerComponent}
                                    
                         ];
 

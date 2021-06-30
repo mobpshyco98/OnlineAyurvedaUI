@@ -31,6 +31,7 @@ import { ViewallordersComponent } from './viewallorders/viewallorders.component'
 import { ViewbyorderidComponent } from './viewbyorderid/viewbyorderid.component';
 import { ViewbycustidComponent } from './viewbycustid/viewbycustid.component';
 import { DeleteorderComponent } from './deleteorder/deleteorder.component';
+import { EditcustomerComponent } from './editcustomer/editcustomer.component';
 
 
 
@@ -61,6 +62,7 @@ import { DeleteorderComponent } from './deleteorder/deleteorder.component';
     ViewcustomerComponent,
     CancelOrderComponent,
     HomeComponent,
+    EditcustomerComponent,
   ],
   imports: [
     BrowserModule,

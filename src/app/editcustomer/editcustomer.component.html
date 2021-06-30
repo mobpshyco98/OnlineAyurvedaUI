@@ -1,0 +1,29 @@
+<section class="mx-auto">
+  <h2 class="text-center">Edit Your details</h2><br>
+  <div class="alert alert-success text-center" *ngIf="msg != undefined">{{msg}}</div>
+
+  <div class="alert alert-danger text-center" *ngIf="errorList != undefined">{{errorList}}</div>
+  <form class="text-center" #form="ngForm" (ngSubmit)="editProfile()">
+    <div>Customer Id : {{customerDto.customerId}}</div>
+    <br>
+
+    <div>Name</div>
+    <div><input type="text" placeholder="Enter Name" name="name1" [(ngModel)]="customerDto.customerName" #cname="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="cname.invalid && cname.touched">Name is required</div><br>
+
+    <div>Contact No.</div>
+    <div><input type="number" placeholder="Enter contact number" name="contact" [(ngModel)]="customerDto.contactNo" #contactNo="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="contactNo.invalid && contactNo.touched">Contact is required</div><br>
+
+    <div>Address</div>
+    <div><input type="text" placeholder="Enter Address" name="address" [(ngModel)]="customerDto.address" #address="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="address.invalid && address.touched">Address is required</div><br>
+
+    <div>location</div>
+    <div><input type="text" placeholder="Enter location" name="location" [(ngModel)]="customerDto.location" #location="ngModel" required></div>
+    <div class="alert alert-danger" *ngIf="location.invalid && location.touched">location is required</div><br>
+
+    <div class="mt-2 text-center"><input type="submit" value="Edit Specification" [disabled]="!form.valid" class="btn btn-danger"></div>
+  </form>
+
+</section>
