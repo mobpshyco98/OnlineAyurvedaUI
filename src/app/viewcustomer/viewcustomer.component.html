@@ -1,6 +1,6 @@
 <section>
   <div class = "col-7 mx-auto p-5">
-    <table class = "table table-striped table-success">
+    <table class = "table table-striped table-success table-responsive ">
       <tr>
         <td>customer Id:</td>
         <td>{{custObj.customerId}}</td>
@@ -16,6 +16,10 @@
       <tr>
         <td>Address</td>
         <td>{{custObj.address}} ,{{custObj.location}}</td>
+      </tr>
+      <tr>
+        <td>Edit Details</td>
+        <td><a routerLink = "/editprofile" class = "btn btn-warning">Edit Details</a></td>
       </tr>
     </table>
   </div>

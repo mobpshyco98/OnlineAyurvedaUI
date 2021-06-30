@@ -75,6 +75,7 @@ export class GetcustomercartComponent implements OnInit {
       this.sum = this.sum + (c.medicine.medicineCost) * (c.qty);
       console.log(this.sum);
     });
+   
     return Math.round(this.sum);
   }
 

@@ -23,7 +23,7 @@ export class EditMedSpecsComponent implements OnInit {
   
   editMedSpecs(){
     this.medSpecService.editMedSpecs(this.medSpecs).subscribe(
-      data=>{alert(data);this.router.navigateByUrl("viewmedspecsbyid")},
+      data=>{console.log(data);alert(JSON.parse(data).message)},
       error=>this.errorMsg = JSON.parse(error.error).message);
   }
 

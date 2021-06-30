@@ -11,6 +11,7 @@ import { DeletecartitemComponent } from './deletecartitem/deletecartitem.compone
 import { DeleteorderComponent } from './deleteorder/deleteorder.component';
 import { EditMedSpecsComponent } from './edit-med-specs/edit-med-specs.component';
 import { EditcartComponent } from './editcart/editcart.component';
+import { EditcustomerComponent } from './editcustomer/editcustomer.component';
 import { GetcustomercartComponent } from './getcustomercart/getcustomercart.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -29,13 +30,13 @@ import { ViewmedspecbyidComponent } from './viewmedspecbyid/viewmedspecbyid.comp
 import { VieworderComponent } from './vieworder/vieworder.component';
 
 const routes: Routes = [{path:'category',component:CategoryComponent,canActivate:[CgGuard],
-                        children:[{path:'addcategory',component:AddcategoryComponent},
+                        children:[{path:'addcategory',component:AddcategoryComponent,canActivate:[CgGuard], data:{role:"admin"}},
                                   {path:'viewallcategory',component:ViewallcategoryComponent}]},
                                   
                         {path:'medicine',component:MedicineComponent,canActivate:[CgGuard],
                         children:[{path:'viewmedicinebycategory',component:ViewmedicinebycategoryComponent},
                                   {path:'viewmedicinebyid',component:ViewmedicinebyidComponent},
-                                  {path:'addmedbycat',component:AddmedbycatComponent}]},
+                                  {path:'addmedbycat',component:AddmedbycatComponent,canActivate:[CgGuard], data:{role:"admin"}}]},
 
                         {path:'login',component:LoginComponent},
                         {path:'profile',component:ViewcustomerComponent},
@@ -46,18 +47,22 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
                         
                         {path:'medspecs',  component:MedSpecComponent,canActivate:[CgGuard],
                         children: [{path:'viewmedspecsbyid', component:ViewmedspecbyidComponent},
-                                   {path:'addmedspecs', component: AddMedSpecsComponent},
-                                   {path:'editmedspecs', component: EditMedSpecsComponent}]},
+                                   {path:'addmedspecs', component: AddMedSpecsComponent,canActivate:[CgGuard], data:{role:"admin"}},
+                                   {path:'editmedspecs', component: EditMedSpecsComponent,canActivate:[CgGuard], data:{role:"admin"}}]},
                                    
-                        { path: 'vieworder', component: VieworderComponent, canActivate:[CgGuard],
-                          children: [{ path: 'bycustid', component: ViewbycustidComponent },
-                                     { path: 'byorderid', component: ViewbyorderidComponent },
-                                     { path: 'allorders', component: ViewallordersComponent}]},
-                        { path: 'deleteorder', component: DeleteorderComponent },
+                        {path: 'order', component: VieworderComponent, canActivate:[CgGuard],
+                        children: [{path: 'bycustid', component: ViewbycustidComponent },
+                                    {path: 'byorderid', component: ViewbyorderidComponent },
+                                    {path: 'allorders', component: ViewallordersComponent,canActivate:[CgGuard], data:{role:"admin"}},
+                                    {path: 'removeorder', component: CancelOrderComponent}]},
+                        
+                        {path: 'deleteorder', component: DeleteorderComponent },
 
                         {path: 'removeorder', component: CancelOrderComponent, canActivate:[CgGuard]},
 
-                        {path: '', component: HomeComponent}
+                        {path: '', component: HomeComponent},
+                        
+                        {path:"editprofile",component:EditcustomerComponent}
                                    
                         ];
 
