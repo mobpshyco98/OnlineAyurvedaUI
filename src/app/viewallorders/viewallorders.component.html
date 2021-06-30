@@ -4,7 +4,7 @@
 </div>
 <section>
   <div *ngIf="msg!=undefined" class="alert alert-danger">{{msg}}</div>
-  <table class="table table-primary table-striped table-responsive{-sm|-md|-lg|-xl}" *ngIf="orders!=undefined">
+  <table class="table table-primary table-striped table-responsive{-sm|-md|-lg|-xl}" style="position:relative;overflow:auto;display:block" *ngIf="orders!=undefined">
     <tr>
       <td>Customer Id</td>
       <td *ngFor="let order of orders">{{order.customer_order.customerId}}</td>
