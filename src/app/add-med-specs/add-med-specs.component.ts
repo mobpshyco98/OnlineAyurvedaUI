@@ -27,7 +27,7 @@ export class AddMedSpecsComponent implements OnInit {
 
   addMedSpecs(){
     this.medSpecService.addMedSpecs(this.medSpecs).subscribe((data)=>{console.log(data);
-                                                  this.msg=data; this.errorMsg=undefined; this.errors = undefined;
+                                                  this.msg=JSON.parse(data).message; this.errorMsg=undefined; this.errors = undefined;
                                                   this.medSpecs=new Medspecdto(); this.form.reset()},
     
      error=>{console.log(error);

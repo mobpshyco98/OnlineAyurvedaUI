@@ -50,11 +50,13 @@ const routes: Routes = [{path:'category',component:CategoryComponent,canActivate
                                    {path:'addmedspecs', component: AddMedSpecsComponent,canActivate:[CgGuard], data:{role:"admin"}},
                                    {path:'editmedspecs', component: EditMedSpecsComponent,canActivate:[CgGuard], data:{role:"admin"}}]},
                                    
-                        { path: 'vieworder', component: VieworderComponent, canActivate:[CgGuard],
-                          children: [{ path: 'bycustid', component: ViewbycustidComponent },
-                                     { path: 'byorderid', component: ViewbyorderidComponent },
-                                     { path: 'allorders', component: ViewallordersComponent}]},
-                        { path: 'deleteorder', component: DeleteorderComponent },
+                        {path: 'order', component: VieworderComponent, canActivate:[CgGuard],
+                        children: [{path: 'bycustid', component: ViewbycustidComponent },
+                                    {path: 'byorderid', component: ViewbyorderidComponent },
+                                    {path: 'allorders', component: ViewallordersComponent},
+                                    {path: 'removeorder', component: CancelOrderComponent}]},
+                        
+                        {path: 'deleteorder', component: DeleteorderComponent },
 
                         {path: 'removeorder', component: CancelOrderComponent, canActivate:[CgGuard]},
 
