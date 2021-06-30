@@ -1,35 +1,40 @@
 <section>
-    <button (click)="showCartItem()" class="btn btn-warning">Confirm Edit</button>
+    <div style="text-align: center;" class="p-5">
+        <button (click)="showCartItem()" class="btn btn-warning ">Confirm Edit</button>
+    </div>
     <div>
-        <table *ngIf="msg!=undefined">
+        <table *ngIf="msg!=undefined" class="table">
             <tr>
-                <td>Medicine Name</td>
-                <td>:{{cartObj.medicine.medicineName}}</td>
+                <td class="table-responsive table-success">Medicine Name</td>
+                <td class="table-responsive table-warning">:{{cartObj.medicine.medicineName}}</td>
             </tr>
             <tr>
-                <td>Manufactured by</td>
-                <td>:{{cartObj.medicine.companyName}}</td>
+                <td class="table-responsive table-success">Manufactured by</td>
+                <td class="table-responsive table-warning">:{{cartObj.medicine.companyName}}</td>
             </tr>
             <tr>
-                <td>Medicine Cost</td>
-                <td>:{{cartObj.medicine.medicineCost}}</td>
+                <td class="table-responsive table-success">Medicine Cost</td>
+                <td class="table-responsive table-warning">:{{cartObj.medicine.medicineCost}}</td>
             </tr>
             <tr>
-                <td>Manufacture date</td>
-                <td>:{{cartObj.medicine.mfd}}</td>
+                <td class="table-responsive table-success">Manufacture date</td>
+                <td class="table-responsive table-warning">:{{cartObj.medicine.mfd}}</td>
             </tr>
             <tr>
-                <td>Expiry Date</td>
-                <td>:{{cartObj.medicine.expiryDate}}</td>
+                <td class="table-responsive table-success">Expiry Date</td>
+                <td class="table-responsive table-warning">:{{cartObj.medicine.expiryDate}}</td>
             </tr>
             <tr>
-                <td>Quantity Ordered</td>
-                <td>:{{cartObj.qty}}</td>
+                <td class="table-responsive table-success">Quantity Ordered</td>
+                <td class="table-responsive table-warning">:{{cartObj.qty}}</td>
             </tr>
             <tr>
-                <td>Enter quantity to edit</td>
-                <td><input type="number" name="editqty" [(ngModel)]="qty"></td>
-                <td><input type="submit" (click) = "editCartItem()"></td>
+                <td class="table-responsive table-success">Enter quantity to edit</td>
+                <td class="table-responsive table-warning"><input type="number" name="editqty" [(ngModel)]="qty"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2"><input type="submit" (click)="editCartItem()" class="btn btn-warning"></td>
             </tr>
         </table>
     </div>

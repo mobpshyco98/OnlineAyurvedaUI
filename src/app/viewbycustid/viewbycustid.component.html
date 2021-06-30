@@ -24,6 +24,8 @@
       <td>Location</td>
       <td>{{customers[0].customer_order.location}}</td>
     </tr>
+  </table>
+<table class="table table-primary table-striped table-responsive{-sm|-md|-lg|-xl}" *ngIf="customers!=undefined">
     <tr>
       <td>Order Id</td>
       <td *ngFor="let customer of customers">{{customer.orderId}}</td>
