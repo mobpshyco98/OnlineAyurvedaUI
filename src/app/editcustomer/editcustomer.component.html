@@ -23,7 +23,7 @@
     <div><input type="text" placeholder="Enter location" name="location" [(ngModel)]="customerDto.location" #location="ngModel" required></div>
     <div class="alert alert-danger" *ngIf="location.invalid && location.touched">location is required</div><br>
 
-    <div class="mt-2 text-center"><input type="submit" value="Edit Specification" [disabled]="!form.valid" class="btn btn-danger"></div>
+    <div class="mt-2 text-center"><input type="submit" value="Submit" [disabled]="!form.valid" class="btn btn-danger"></div>
   </form>
 
 </section>
